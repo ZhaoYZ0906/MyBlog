@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "vteqVjDo19kSusa/wpf7WZ4mGnNqDhpD8YQ7F/DkbNc=",
-  "Source": "Blog.Core",
-  "BasePath": "_content/Blog.Core",
+  "Hash": "+xIC6nactSjNx50HEsgatFqr5PWWAm13fK6o7+YDcts=",
+  "Source": "Blog.Core.Api",
+  "BasePath": "_content/Blog.Core.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

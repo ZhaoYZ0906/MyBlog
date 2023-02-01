@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Blog.Core.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Blog.Core.Api.Controllers.ValuesController">
+            <summary>
+            控制器注释
+            </summary>
+        </member>
+        <member name="M:Blog.Core.Api.Controllers.ValuesController.Get">
+            <summary>
+            获取所有信息
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

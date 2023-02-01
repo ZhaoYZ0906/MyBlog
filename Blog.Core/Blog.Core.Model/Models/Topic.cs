@@ -8,7 +8,7 @@ namespace Blog.Core.Model.Models
 {
     /// <summary>博客文章
     /// 
-    /// </summary
+    /// </summary>
     public class Topic
     {
         public Topic()

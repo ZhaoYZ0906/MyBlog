@@ -12,7 +12,7 @@ namespace Blog.Core.Model.Models
     public class BlogArticle
     {
         /// <summary>
-        /// 
+        /// ID
         /// </summary>
         public int bID { get; set; }
         /// <summary>
