@@ -1,5 +1,10 @@
-﻿using Microsoft.Extensions.Options;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System.Reflection;
+using System.Text;
 
 namespace Blog.Core
 {
@@ -30,12 +35,48 @@ namespace Blog.Core
 
                         // 获取XML文件路径
                         var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                        c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename),true);
+                        c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename), true);
                         // 包含model.xml文件
                         c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Blog.Core.Model.xml"), true);
                     }
                 );
 
+            // 编写授权策略
+            // 策略的优势在于统一控制，修改一处即可
+            services.AddAuthorization(options =>
+                {
+                    options.AddPolicy("Client", policy => policy.RequireRole("Client").Build());//单独角色
+                    options.AddPolicy("Admin", policy => policy.RequireRole("Admin").Build());
+                    options.AddPolicy("SystemOrAdmin", policy => policy.RequireRole("Admin", "System"));//或的关系
+                    options.AddPolicy("SystemAndAdmin", policy => policy.RequireRole("Admin").RequireRole("System"));//且的关系
+                }
+            );
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("sdfsdfsrty45634kkhllghtdgdfss345t678fs"));
+
+            // 认证服务
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            // 认证策略
+            .AddJwtBearer(o =>
+            {
+                o.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = key,//参数配置在下边
+                    ValidateIssuer = true,
+                    ValidIssuer = "zyz",//发行人
+                    ValidateAudience = true,
+                    ValidAudience = "user1",//订阅人
+                    //ValidateLifetime = true,
+                    //ClockSkew = TimeSpan.Zero,//这个是缓冲过期时间，也就是说，即使我们配置了过期时间，这里也要考虑进去，过期时间+缓冲，默认好像是7分钟，你可以直接设置为0
+                    //RequireExpirationTime = true,
+                };
+
+            });
         }
 
         public void Configure(WebApplication app)
@@ -53,6 +94,8 @@ namespace Blog.Core
                     option.RoutePrefix = string.Empty;
                 }
             );
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

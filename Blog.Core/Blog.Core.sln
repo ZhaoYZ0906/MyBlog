@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Core.Api", "Blog.Core\Blog.Core.Api.csproj", "{901F0477-08AA-4085-B37C-5772B698C8CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.Core.Api", "Blog.Core\Blog.Core.Api.csproj", "{901F0477-08AA-4085-B37C-5772B698C8CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Core.Model", "Blog.Core.Model\Blog.Core.Model.csproj", "{FA6B7778-AC44-4266-B879-4EA0C9BE0BD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.Core.Model", "Blog.Core.Model\Blog.Core.Model.csproj", "{FA6B7778-AC44-4266-B879-4EA0C9BE0BD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Core.Common", "Blog.Core.Common\Blog.Core.Common.csproj", "{DDE6AF2C-C484-4050-970B-3833BC3F1717}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{FA6B7778-AC44-4266-B879-4EA0C9BE0BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA6B7778-AC44-4266-B879-4EA0C9BE0BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA6B7778-AC44-4266-B879-4EA0C9BE0BD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDE6AF2C-C484-4050-970B-3833BC3F1717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE6AF2C-C484-4050-970B-3833BC3F1717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE6AF2C-C484-4050-970B-3833BC3F1717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE6AF2C-C484-4050-970B-3833BC3F1717}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,6 +4,35 @@
         <name>Blog.Core.Api</name>
     </assembly>
     <members>
+        <member name="M:Blog.Core.Api.AuthHelper.JwtHelper.IssueJwt(Blog.Core.Api.AuthHelper.TokenModelJwt)">
+            <summary>
+            颁发JWT字符串
+            </summary>
+            <param name="tokenModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Blog.Core.Api.AuthHelper.JwtHelper.SerializeJwt(System.String)">
+            <summary>
+            解析
+            </summary>
+            <param name="jwtStr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Blog.Core.Api.AuthHelper.TokenModelJwt">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Api.AuthHelper.TokenModelJwt.Uid">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Blog.Core.Api.AuthHelper.TokenModelJwt.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
         <member name="T:Blog.Core.Api.Controllers.ValuesController">
             <summary>
             控制器注释

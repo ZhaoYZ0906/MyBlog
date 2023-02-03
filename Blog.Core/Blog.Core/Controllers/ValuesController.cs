@@ -1,4 +1,5 @@
 ﻿using Blog.Core.Model.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -10,6 +11,7 @@ namespace Blog.Core.Api.Controllers
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Policy = "Admin")]
     public class ValuesController : ControllerBase
     {
         /// <summary>
@@ -17,6 +19,7 @@ namespace Blog.Core.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
+        //[Authorize(Roles = "Admin")]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
