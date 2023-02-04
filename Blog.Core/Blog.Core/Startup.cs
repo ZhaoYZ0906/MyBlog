@@ -77,6 +77,8 @@ namespace Blog.Core
                 };
 
             });
+            // 自定义认证方案
+            //.AddJwtBearer("", x => { });
         }
 
         public void Configure(WebApplication app)
