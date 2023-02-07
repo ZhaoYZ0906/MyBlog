@@ -1,0 +1,63 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Blog.Core.Services/1.0.0": {
+        "dependencies": {
+          "Blog.Core.Interface": "1.0.0",
+          "Blog.Core.Repository": "1.0.0"
+        },
+        "runtime": {
+          "Blog.Core.Services.dll": {}
+        }
+      },
+      "Blog.Core.Interface/1.0.0": {
+        "dependencies": {
+          "Blog.Core.Model": "1.0.0"
+        },
+        "runtime": {
+          "Blog.Core.Interface.dll": {}
+        }
+      },
+      "Blog.Core.Model/1.0.0": {
+        "runtime": {
+          "Blog.Core.Model.dll": {}
+        }
+      },
+      "Blog.Core.Repository/1.0.0": {
+        "dependencies": {
+          "Blog.Core.Interface": "1.0.0"
+        },
+        "runtime": {
+          "Blog.Core.Repository.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Blog.Core.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Blog.Core.Interface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Blog.Core.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Blog.Core.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

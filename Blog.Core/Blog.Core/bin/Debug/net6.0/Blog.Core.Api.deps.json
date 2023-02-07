@@ -9,7 +9,9 @@
       "Blog.Core.Api/1.0.0": {
         "dependencies": {
           "Blog.Core.Common": "1.0.0",
+          "Blog.Core.Interface": "1.0.0",
           "Blog.Core.Model": "1.0.0",
+          "Blog.Core.Services": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.13",
           "Swashbuckle.AspNetCore": "6.5.0",
           "System.IdentityModel.Tokens.Jwt": "6.26.0"
@@ -313,9 +315,34 @@
           "Blog.Core.Common.dll": {}
         }
       },
+      "Blog.Core.Interface/1.0.0": {
+        "dependencies": {
+          "Blog.Core.Model": "1.0.0"
+        },
+        "runtime": {
+          "Blog.Core.Interface.dll": {}
+        }
+      },
       "Blog.Core.Model/1.0.0": {
         "runtime": {
           "Blog.Core.Model.dll": {}
+        }
+      },
+      "Blog.Core.Repository/1.0.0": {
+        "dependencies": {
+          "Blog.Core.Interface": "1.0.0"
+        },
+        "runtime": {
+          "Blog.Core.Repository.dll": {}
+        }
+      },
+      "Blog.Core.Services/1.0.0": {
+        "dependencies": {
+          "Blog.Core.Interface": "1.0.0",
+          "Blog.Core.Repository": "1.0.0"
+        },
+        "runtime": {
+          "Blog.Core.Services.dll": {}
         }
       }
     }
@@ -548,7 +575,22 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Blog.Core.Interface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Blog.Core.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Blog.Core.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Blog.Core.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

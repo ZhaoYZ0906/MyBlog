@@ -56,3 +56,9 @@ D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Blog.Core.Common.p
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Blog.Core.Interface.dll
+D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Blog.Core.Repository.dll
+D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Blog.Core.Services.dll
+D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Blog.Core.Interface.pdb
+D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Blog.Core.Services.pdb
+D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Blog.Core.Repository.pdb

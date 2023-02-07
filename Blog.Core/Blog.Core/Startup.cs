@@ -97,7 +97,7 @@ namespace Blog.Core
                 }
             );
 
-            app.UseAuthentication();
+            //app.UseAuthentication();
 
             app.UseAuthorization();
 

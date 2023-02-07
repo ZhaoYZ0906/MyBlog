@@ -1,6 +1,9 @@
-﻿using Blog.Core.Model.Models;
+﻿using Blog.Core.Interface.IServices;
+using Blog.Core.Model.Models;
+using Blog.Core.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,9 +14,11 @@ namespace Blog.Core.Api.Controllers
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Policy = "Admin")]
+    //[Authorize(Policy = "Admin")]
     public class ValuesController : ControllerBase
     {
+        IAdvertisementServices Advertisement = new AdvertisementServices();
+
         /// <summary>
         /// 获取所有信息
         /// </summary>
@@ -22,14 +27,15 @@ namespace Blog.Core.Api.Controllers
         //[Authorize(Roles = "Admin")]
         public IEnumerable<string> Get()
         {
+            
             return new string[] { "value1", "value2" };
         }
 
         // GET api/<ValuesController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public int Get(int id)
         {
-            return "value";
+            return Advertisement.Sum(1, 2);
         }
 
         // POST api/<ValuesController>
