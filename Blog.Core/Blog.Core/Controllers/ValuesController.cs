@@ -25,10 +25,9 @@ namespace Blog.Core.Api.Controllers
         /// <returns></returns>
         [HttpGet]
         //[Authorize(Roles = "Admin")]
-        public IEnumerable<string> Get()
+        public IEnumerable<Advertisement> Get()
         {
-            
-            return new string[] { "value1", "value2" };
+            return Advertisement.Query(x => x.Id == 1);
         }
 
         // GET api/<ValuesController>/5
