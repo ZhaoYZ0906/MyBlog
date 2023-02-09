@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Blog.Core.Interface.IRepository
 {
-    public interface IAdvertisementRepository //: IBaseRepository<Advertisement>
+    public interface IAdvertisementRepository
     {
         int Sum(int i, int j);
 

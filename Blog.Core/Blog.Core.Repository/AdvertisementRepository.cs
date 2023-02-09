@@ -1,5 +1,6 @@
 ﻿using Blog.Core.Interface.IRepository;
 using Blog.Core.Model.Models;
+using Blog.Core.Repository.Base;
 using Blog.Core.Repository.Sugar;
 using SqlSugar;
 using SqlSugar.Extensions;
@@ -13,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace Blog.Core.Repository
 {
-    public class AdvertisementRepository: IAdvertisementRepository
+    public class AdvertisementRepository: BaseRepository<Advertisement>,IAdvertisementRepository
     {
         private DbContext context;
         private SqlSugarClient db;

@@ -25,16 +25,16 @@ namespace Blog.Core.Api.Controllers
         /// <returns></returns>
         [HttpGet]
         //[Authorize(Roles = "Admin")]
-        public IEnumerable<Advertisement> Get()
+        public async Task<IEnumerable<Advertisement>> Get()
         {
-            return Advertisement.Query(x => x.Id == 1);
+            return await Advertisement.Query(x => x.Id > 1);
         }
 
         // GET api/<ValuesController>/5
         [HttpGet("{id}")]
         public int Get(int id)
         {
-            return Advertisement.Sum(1, 2);
+            return 3;
         }
 
         // POST api/<ValuesController>
