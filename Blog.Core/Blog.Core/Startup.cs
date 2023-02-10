@@ -79,6 +79,11 @@ namespace Blog.Core
             });
             // 自定义认证方案
             //.AddJwtBearer("", x => { });
+
+            // 自带注入框架
+            //services.AddTransient<IAdvertisementRepository, AdvertisementRepository>();
+
+            //services.AddTransient<IAdvertisementServices, AdvertisementServices>();
         }
 
         public void Configure(WebApplication app)

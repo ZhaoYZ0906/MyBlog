@@ -12,7 +12,7 @@ namespace Blog.Core.Services.Base
 {
     public class BaseServices<TEntity> : IBaseServices<TEntity> where TEntity : class, new()
     {
-        public IBaseRepository<TEntity> baseDal = new BaseRepository<TEntity>();
+        public IBaseRepository<TEntity> baseDal;//= new BaseRepository<TEntity>();
 
         /// <summary>
         /// 根据ID查询一条数据      

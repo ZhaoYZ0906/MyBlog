@@ -1,6 +1,5 @@
 ﻿using Blog.Core.Interface.IServices;
 using Blog.Core.Model.Models;
-using Blog.Core.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -17,7 +16,12 @@ namespace Blog.Core.Api.Controllers
     //[Authorize(Policy = "Admin")]
     public class ValuesController : ControllerBase
     {
-        IAdvertisementServices Advertisement = new AdvertisementServices();
+        IAdvertisementServices Advertisement;//= new AdvertisementServices();
+
+        public ValuesController(IAdvertisementServices Advertisement) 
+        { 
+            this.Advertisement = Advertisement;
+        }
 
         /// <summary>
         /// 获取所有信息
