@@ -17,10 +17,12 @@ namespace Blog.Core.Api.Controllers
     public class ValuesController : ControllerBase
     {
         IAdvertisementServices Advertisement;//= new AdvertisementServices();
+        IBlogArticleService blogArticle;
 
-        public ValuesController(IAdvertisementServices Advertisement) 
+        public ValuesController(IAdvertisementServices Advertisement, IBlogArticleService BlogArticle) 
         { 
             this.Advertisement = Advertisement;
+            blogArticle=BlogArticle;
         }
 
         /// <summary>
@@ -29,9 +31,9 @@ namespace Blog.Core.Api.Controllers
         /// <returns></returns>
         [HttpGet]
         //[Authorize(Roles = "Admin")]
-        public async Task<IEnumerable<Advertisement>> Get()
+        public async Task<IEnumerable<BlogArticle>> Get()
         {
-            return await Advertisement.Query(x => x.Id > 1);
+            return await blogArticle.Query(x => x.bID>1);
         }
 
         // GET api/<ValuesController>/5

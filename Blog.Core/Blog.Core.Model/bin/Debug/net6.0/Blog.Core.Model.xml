@@ -219,7 +219,11 @@
             备注
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "T:Blog.Core.Model.Models.BlogArticle" -->
+        <member name="T:Blog.Core.Model.Models.BlogArticle">
+            <summary>
+            博客文章
+            </summary>
+        </member>
         <member name="P:Blog.Core.Model.Models.BlogArticle.bID">
             <summary>
             ID

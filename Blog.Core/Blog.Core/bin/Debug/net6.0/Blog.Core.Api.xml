@@ -4,6 +4,21 @@
         <name>Blog.Core.Api</name>
     </assembly>
     <members>
+        <member name="T:Blog.Core.Api.AOP.BlogCacheAOP">
+            <summary>
+            面向切面的缓存使用
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Api.AOP.ICaching">
+            <summary>
+            简单的缓存接口，只有查询和添加，以后会进行扩展
+            </summary>
+        </member>
+        <member name="T:Blog.Core.Api.AOP.MemoryCaching">
+            <summary>
+            实例化缓存接口ICaching
+            </summary>
+        </member>
         <member name="M:Blog.Core.Api.AuthHelper.JwtHelper.IssueJwt(Blog.Core.Api.AuthHelper.TokenModelJwt)">
             <summary>
             颁发JWT字符串

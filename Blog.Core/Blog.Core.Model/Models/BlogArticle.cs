@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Blog.Core.Model.Models
 {
-    /// <summary>博客文章
-    /// 
-    /// </summary
+    /// <summary>
+    /// 博客文章
+    /// </summary>
     public class BlogArticle
     {
         /// <summary>

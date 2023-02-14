@@ -12,12 +12,16 @@
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.13" />
+    <PackageReference Include="MiniProfiler.Shared" Version="4.2.22" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Blog.Core.Common\Blog.Core.Common.csproj" />
     <ProjectReference Include="..\Blog.Core.Interface\Blog.Core.Interface.csproj" />
+    <ProjectReference Include="..\Blog.Core.Repository\Blog.Core.Repository.csproj" />
+    <ProjectReference Include="..\Blog.Core.Services\Blog.Core.Services.csproj" />
   </ItemGroup>
 
 </Project>
