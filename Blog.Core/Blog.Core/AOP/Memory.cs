@@ -9,7 +9,7 @@ namespace Blog.Core.Api.AOP
     {
         object Get(string cacheKey);
 
-        void Set(string cacheKey, object cacheValue);
+        void Set(string cacheKey, object cacheValue,double AbsoluteExpiration);
     }
 
     /// <summary>
@@ -30,9 +30,9 @@ namespace Blog.Core.Api.AOP
             return _cache.Get(cacheKey);
         }
 
-        public void Set(string cacheKey, object cacheValue)
+        public void Set(string cacheKey, object cacheValue,double AbsoluteExpiration=7200)
         {
-            _cache.Set(cacheKey, cacheValue, TimeSpan.FromSeconds(7200));
+            _cache.Set(cacheKey, cacheValue, TimeSpan.FromSeconds(AbsoluteExpiration));
         }
     }
 }

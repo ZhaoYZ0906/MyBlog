@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration.Json;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,20 +17,6 @@ namespace Blog.Core.Common.Helper
         static IConfiguration Configuration { get; set; }
         static string contentPath { get; set; }
 
-        //public Appsettings(string contentPath)
-        //{
-        //    string Path = "appsettings.json";
-
-        //    Configuration = new ConfigurationBuilder()
-        //   .Add(new JsonConfigurationSource { Path = "appsettings.json", ReloadOnChange = true })
-        //   .Build();
-        //}
-
-        //public Appsettings(IConfiguration configuration)
-        //{
-        //    Configuration = configuration;
-        //}
-
         static Appsettings()
         {
             //ReloadOnChange = true 当appsettings.json被修改时重新加载
@@ -38,41 +25,25 @@ namespace Blog.Core.Common.Helper
             .Build();
         }
 
-
         /// <summary>
         /// 封装要操作的字符
         /// </summary>
-        /// <param name="sections">节点配置</param>
+        /// <param name="sections"></param>
         /// <returns></returns>
         public static string app(params string[] sections)
         {
             try
             {
+                var val = string.Empty;
+                val=String.Join(":", sections);
 
-                if (sections.Any())
-                {
-                    return Configuration["Audience"]= "Issuer";
-                    //return Configuration[string.Join(":", sections)];
-                }
+                return Configuration[val.TrimEnd(':')];
             }
-            catch (Exception) { }
-
-            return "";
+            catch (Exception)
+            {
+                return "";
+            }
         }
-
-        /// <summary>
-        /// 递归获取配置信息数组
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="sections"></param>
-        /// <returns></returns>
-        //public static List<T> app<T>(params string[] sections)
-        //{
-        //    List<T> list = new List<T>();
-        //    // 引用 Microsoft.Extensions.Configuration.Binder 包
-        //    Configuration.Bind(string.Join(":", sections), list);
-        //    return list;
-        //}
 
     }
 }

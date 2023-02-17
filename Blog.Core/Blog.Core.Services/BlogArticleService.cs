@@ -1,4 +1,5 @@
-﻿using Blog.Core.Interface.IRepository;
+﻿using Blog.Core.Common.Attributes;
+using Blog.Core.Interface.IRepository;
 using Blog.Core.Interface.IServices;
 using Blog.Core.Model.Models;
 using Blog.Core.Services.Base;
@@ -18,6 +19,20 @@ namespace Blog.Core.Services
         {
             this.dal = dal;
             base.baseDal = dal;
+        }
+
+        /// <summary>
+        /// 获取博客列表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [Caching(AbsoluteExpiration = 100000)]
+        public async Task<List<BlogArticle>> getBlogs()
+        {
+            var bloglist = await dal.Query(a => a.bID > 0, a =>   a.bID  );
+
+            return bloglist;
+
         }
 
     }

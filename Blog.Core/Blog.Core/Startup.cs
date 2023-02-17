@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Blog.Core.Common.Helper;
+using Blog.Core.Common.Redis;
+using Blog.Core.Interface.IRedis;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using StackExchange.Redis;
 using System.Reflection;
 using System.Text;
 
@@ -84,6 +88,21 @@ namespace Blog.Core
             //services.AddTransient<IAdvertisementRepository, AdvertisementRepository>();
 
             //services.AddTransient<IAdvertisementServices, AdvertisementServices>();
+
+
+            
+            // 配置启动Redis服务，虽然可能影响项目启动速度，但是不能在运行的时候报错，所以是合理的
+            services.AddSingleton<ConnectionMultiplexer>(sp =>
+            {
+                //获取连接字符串
+                string redisConfiguration = Appsettings.app(new string[] { "AppSettings", "RedisCaching", "ConnectionString" });
+
+                var configuration = ConfigurationOptions.Parse(redisConfiguration, true);
+
+                configuration.ResolveDns = true;
+
+                return ConnectionMultiplexer.Connect(configuration);
+            });
         }
 
         public void Configure(WebApplication app)

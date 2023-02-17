@@ -2,10 +2,15 @@
 using Autofac.Core;
 using Autofac.Extras.DynamicProxy;
 using Blog.Core.Api.AOP;
+using Blog.Core.Common.Helper;
+using Blog.Core.Common.Redis;
+using Blog.Core.Interface.IRedis;
 using Blog.Core.Interface.IRepository;
 using Blog.Core.Interface.IServices;
+using Blog.Core.Repository;
 using Blog.Core.Services;
 using Microsoft.Extensions.Caching.Memory;
+using StackExchange.Redis;
 using System.Reflection;
 
 namespace Blog.Core.Api
@@ -44,6 +49,10 @@ namespace Blog.Core.Api
             // 根据项目名，扫描其下所有类并注入
             var assemblysCommon = Assembly.Load("Blog.Core.Common");
             builder.RegisterAssemblyTypes(assemblysCommon);
+
+
+            // 注入redis操作类
+            builder.RegisterType<RedisBasketRepository>().As<IRedisBasketRepository>().InstancePerLifetimeScope();            
         }
     }
 }

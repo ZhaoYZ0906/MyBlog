@@ -10,5 +10,6 @@ namespace Blog.Core.Interface.IServices
 {
     public interface IBlogArticleService:IBaseServices<BlogArticle>
     {
+        Task<List<BlogArticle>> getBlogs();
     }
 }

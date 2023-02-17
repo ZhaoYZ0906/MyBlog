@@ -1,4 +1,7 @@
-﻿using Blog.Core.Interface.IServices;
+﻿using Blog.Core.Common.Helper;
+using Blog.Core.Common.Redis;
+using Blog.Core.Interface.IRedis;
+using Blog.Core.Interface.IServices;
 using Blog.Core.Model.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -18,11 +21,13 @@ namespace Blog.Core.Api.Controllers
     {
         IAdvertisementServices Advertisement;//= new AdvertisementServices();
         IBlogArticleService blogArticle;
+        IRedisBasketRepository redisBasketRepository;
 
-        public ValuesController(IAdvertisementServices Advertisement, IBlogArticleService BlogArticle) 
+        public ValuesController(IAdvertisementServices Advertisement, IBlogArticleService BlogArticle, IRedisBasketRepository RedisBasketRepository) 
         { 
             this.Advertisement = Advertisement;
             blogArticle=BlogArticle;
+            redisBasketRepository=RedisBasketRepository;
         }
 
         /// <summary>
@@ -33,7 +38,22 @@ namespace Blog.Core.Api.Controllers
         //[Authorize(Roles = "Admin")]
         public async Task<IEnumerable<BlogArticle>> Get()
         {
-            return await blogArticle.Query(x => x.bID>1);
+            //var connect = Appsettings.app(new string[] { "AppSettings", "RedisCaching", "ConnectionString" });//按照层级的顺序，依次写出来
+
+
+            List<BlogArticle> blogArticleList = await blogArticle.getBlogs();
+
+            // 直接使用redis
+            //blogArticleList = await redisBasketRepository.Get<List<BlogArticle>>("zyz");
+
+            //if (blogArticleList == null)
+            //{
+            //    blogArticleList = await blogArticle.Query(d => d.bID > 5);
+            //    redisBasketRepository.Set("zyz", blogArticleList, TimeSpan.FromHours(2));//缓存2小时
+            //}
+
+
+            return blogArticleList;
         }
 
         // GET api/<ValuesController>/5

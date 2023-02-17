@@ -18,3 +18,5 @@ D:\$备份\日常\MyBlog\Blog.Core\Blog.Core.Services\obj\Debug\net6.0\Blog.Core
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core.Services\obj\Debug\net6.0\refint\Blog.Core.Services.dll
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core.Services\obj\Debug\net6.0\Blog.Core.Services.pdb
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core.Services\obj\Debug\net6.0\ref\Blog.Core.Services.dll
+D:\$备份\日常\MyBlog\Blog.Core\Blog.Core.Services\bin\Debug\net6.0\Blog.Core.Common.dll
+D:\$备份\日常\MyBlog\Blog.Core\Blog.Core.Services\bin\Debug\net6.0\Blog.Core.Common.pdb

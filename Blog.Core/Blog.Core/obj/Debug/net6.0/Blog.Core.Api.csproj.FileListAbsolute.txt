@@ -119,3 +119,5 @@ D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\runtimes\browser\l
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Blog.Core.Common.dll
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Blog.Core.Common.pdb
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\MiniProfiler.Shared.dll
+D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
+D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\StackExchange.Redis.dll
