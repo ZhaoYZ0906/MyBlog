@@ -95,7 +95,7 @@ namespace Blog.Core
             services.AddSingleton<ConnectionMultiplexer>(sp =>
             {
                 //获取连接字符串
-                string redisConfiguration = Appsettings.app(new string[] { "AppSettings", "RedisCaching", "ConnectionString" });
+                string redisConfiguration = Appsettings.read(new string[] { "AppSettings", "RedisCaching", "ConnectionString" });
 
                 var configuration = ConfigurationOptions.Parse(redisConfiguration, true);
 
@@ -103,6 +103,7 @@ namespace Blog.Core
 
                 return ConnectionMultiplexer.Connect(configuration);
             });
+
         }
 
         public void Configure(WebApplication app)

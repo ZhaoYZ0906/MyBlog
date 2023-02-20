@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lDdKuBTy8nKuoYUrgjmurUwYyh7Q6OprmAe95DQtdzjUTVKzOrOQvKmDYB6/FwjrKOlFvsUmKlQg+zCOfsV11g==",
+  "dgSpecHash": "csd7H3Eq29oh0L13nghNsHg8wZ+r5aE9q8UZCRBfjqxPZSGbOOjP7jmxCx3XiITRoSM9Dzov1+yy+l4ZpzPpiQ==",
   "success": true,
   "projectFilePath": "D:\\$备份\\日常\\MyBlog\\Blog.Core\\Blog.Core\\Blog.Core.Api.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\CONG\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\CONG\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\CONG\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\CONG\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.3\\microsoft.extensions.configuration.binder.7.0.3.nupkg.sha512",
     "C:\\Users\\CONG\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\7.0.0\\microsoft.extensions.configuration.fileextensions.7.0.0.nupkg.sha512",
     "C:\\Users\\CONG\\.nuget\\packages\\microsoft.extensions.configuration.json\\7.0.0\\microsoft.extensions.configuration.json.7.0.0.nupkg.sha512",
     "C:\\Users\\CONG\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",

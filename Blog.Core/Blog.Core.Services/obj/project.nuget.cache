@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VmNdjYweX8YUnrlxs3aIqeiOR2Y7GqBrQNH4Yxh0fapOQPFLItQy/a2jbkFbL5V2bYb4UhKo+kgqtgrRbSGQPQ==",
+  "dgSpecHash": "nY4nxhG0PbHVQs7tbCwzDfewox2CgHClz+tKMXrznf5EGjDaXjCGVLDjHcfhUiDGVGI/duSXtzIAW3UjJmkg2w==",
   "success": true,
   "projectFilePath": "D:\\$备份\\日常\\MyBlog\\Blog.Core\\Blog.Core.Services\\Blog.Core.Services.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\CONG\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.5\\microsoft.data.sqlite.core.5.0.5.nupkg.sha512",
     "C:\\Users\\CONG\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\CONG\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\CONG\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.3\\microsoft.extensions.configuration.binder.7.0.3.nupkg.sha512",
     "C:\\Users\\CONG\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\7.0.0\\microsoft.extensions.configuration.fileextensions.7.0.0.nupkg.sha512",
     "C:\\Users\\CONG\\.nuget\\packages\\microsoft.extensions.configuration.json\\7.0.0\\microsoft.extensions.configuration.json.7.0.0.nupkg.sha512",
     "C:\\Users\\CONG\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\7.0.0\\microsoft.extensions.fileproviders.abstractions.7.0.0.nupkg.sha512",

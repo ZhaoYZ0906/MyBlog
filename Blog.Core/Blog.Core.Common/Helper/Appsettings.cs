@@ -1,11 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
-using System;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Blog.Core.Common.Helper
 {
@@ -30,7 +24,7 @@ namespace Blog.Core.Common.Helper
         /// </summary>
         /// <param name="sections"></param>
         /// <returns></returns>
-        public static string app(params string[] sections)
+        public static string read(params string[] sections)
         {
             try
             {
@@ -44,6 +38,14 @@ namespace Blog.Core.Common.Helper
                 return "";
             }
         }
+
+        public static List<T> read<T>(params string[] session)
+        {
+            List<T> list = new List<T>();
+            Configuration.Bind(string.Join(":", session), list);
+            return list;
+        }
+
 
     }
 }
