@@ -121,7 +121,4 @@ D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Blog.Core.Common.p
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\MiniProfiler.Shared.dll
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\StackExchange.Redis.dll
-D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\EntityFramework.SqlServer.dll
-D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\EntityFramework.dll
-D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\System.Web.Providers.dll
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll

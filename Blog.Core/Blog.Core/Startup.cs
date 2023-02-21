@@ -104,10 +104,43 @@ namespace Blog.Core
                 return ConnectionMultiplexer.Connect(configuration);
             });
 
+            #region CORS
+            //跨域第一种方法，先注入服务，声明策略，然后再下边app中配置开启中间件
+            services.AddCors(c =>
+            {
+                //↓↓↓↓↓↓↓注意正式环境不要使用这种全开放的处理↓↓↓↓↓↓↓↓↓↓
+                c.AddPolicy("AllRequests", policy =>
+                {
+                    policy
+                    //.AllowAnyOrigin()//允许任何源
+                    .WithOrigins("*", "*", "*")
+                    .AllowAnyMethod()//允许任何方式
+                    .AllowAnyHeader()//允许任何头
+                    .AllowCredentials();//允许cookie
+                });
+                //↑↑↑↑↑↑↑注意正式环境不要使用这种全开放的处理↑↑↑↑↑↑↑↑↑↑
+
+
+                //一般采用这种方法
+                c.AddPolicy("LimitRequests", policy =>
+                {
+                    policy
+                    .WithOrigins("http://127.0.0.1:1818", "http://localhost:8080", "http://localhost:8021", "http://localhost:8081", "http://localhost:1818")//支持多个域名端口，注意端口号后不要带/斜杆：比如localhost:8000/，是错的
+                    .AllowAnyHeader()//Ensures that the policy allows any header.
+                    .AllowAnyMethod();
+                });
+            });
+
+            // 这是第二种注入跨域服务的方法，这里有歧义，部分读者可能没看懂，请看下边解释
+            //services.AddCors();
+            #endregion
+
         }
 
         public void Configure(WebApplication app)
         {
+            app.UseCors("LimitRequests");
+
             // 注册接口文档中间件
             app.UseSwagger();
             app.UseSwaggerUI(
