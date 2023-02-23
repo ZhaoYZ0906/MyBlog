@@ -39,82 +39,82 @@
             备注
             </summary>
         </member>
-        <member name="T:Blog.Core.Model.Dto.BlogViewModels">
+        <member name="T:Blog.Core.Model.Dto.BlogDto">
             <summary>
             博客信息展示类
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Dto.BlogViewModels.bID">
+        <member name="P:Blog.Core.Model.Dto.BlogDto.bID">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Dto.BlogViewModels.bsubmitter">
+        <member name="P:Blog.Core.Model.Dto.BlogDto.bsubmitter">
             <summary>创建人
             
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Dto.BlogViewModels.btitle">
+        <member name="P:Blog.Core.Model.Dto.BlogDto.btitle">
             <summary>博客标题
             
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Dto.BlogViewModels.digest">
+        <member name="P:Blog.Core.Model.Dto.BlogDto.digest">
             <summary>摘要
             
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Dto.BlogViewModels.previous">
+        <member name="P:Blog.Core.Model.Dto.BlogDto.previous">
             <summary>
             上一篇
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Dto.BlogViewModels.previousID">
+        <member name="P:Blog.Core.Model.Dto.BlogDto.previousID">
             <summary>
             上一篇id
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Dto.BlogViewModels.next">
+        <member name="P:Blog.Core.Model.Dto.BlogDto.next">
             <summary>
             下一篇
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Dto.BlogViewModels.nextID">
+        <member name="P:Blog.Core.Model.Dto.BlogDto.nextID">
             <summary>
             下一篇id
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Dto.BlogViewModels.bcategory">
+        <member name="P:Blog.Core.Model.Dto.BlogDto.bcategory">
             <summary>类别
             
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Dto.BlogViewModels.bcontent">
+        <member name="P:Blog.Core.Model.Dto.BlogDto.bcontent">
             <summary>内容
             
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Dto.BlogViewModels.btraffic">
+        <member name="P:Blog.Core.Model.Dto.BlogDto.btraffic">
             <summary>
             访问量
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Dto.BlogViewModels.bcommentNum">
+        <member name="P:Blog.Core.Model.Dto.BlogDto.bcommentNum">
             <summary>
             评论数量
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Dto.BlogViewModels.bUpdateTime">
+        <member name="P:Blog.Core.Model.Dto.BlogDto.bUpdateTime">
             <summary> 修改时间
             
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Dto.BlogViewModels.bCreateTime">
+        <member name="P:Blog.Core.Model.Dto.BlogDto.bCreateTime">
             <summary>
             创建时间
             </summary>
         </member>
-        <member name="P:Blog.Core.Model.Dto.BlogViewModels.bRemark">
+        <member name="P:Blog.Core.Model.Dto.BlogDto.bRemark">
             <summary>备注
             
             </summary>

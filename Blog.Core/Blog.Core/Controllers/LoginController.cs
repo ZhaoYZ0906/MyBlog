@@ -1,5 +1,8 @@
-﻿using Blog.Core.Api.AuthHelper;
+﻿using AutoMapper;
+using Blog.Core.Api.AuthHelper;
 using Blog.Core.Common.Helper;
+using Blog.Core.Model.Dto;
+using Blog.Core.Model.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Blog.Core.Api.Controllers
@@ -7,10 +10,19 @@ namespace Blog.Core.Api.Controllers
     [Route("api/Login")]
     public class LoginController : Controller
     {
+        //IMapper IMapper;
+        //public LoginController(IMapper IMapper)
+        //{
+        //    this.IMapper = IMapper;
+        //}
+
         [HttpGet]
         [Route("Token")]
         public async Task<object> GetJwtStr(string name, string pass)
         {
+            //BlogArticle cs = new BlogArticle() {bID=1,btitle="12313135456" };
+            //BlogDto BlogDto = IMapper.Map<BlogDto>(cs);
+
             var ss = Appsettings.read( new[] { "AppSettings", "catalogue" });
 
             // 将用户id和角色名，作为单独的自定义变量封装进 token 字符串中。

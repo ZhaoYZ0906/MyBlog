@@ -122,3 +122,5 @@ D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\MiniProfiler.Share
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\StackExchange.Redis.dll
 D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\AutoMapper.dll
+D:\$备份\日常\MyBlog\Blog.Core\Blog.Core\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

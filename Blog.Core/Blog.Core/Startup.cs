@@ -1,4 +1,5 @@
-﻿using Blog.Core.Common.Helper;
+﻿using Blog.Core.Api.AutoMap;
+using Blog.Core.Common.Helper;
 using Blog.Core.Common.Redis;
 using Blog.Core.Interface.IRedis;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -134,6 +135,9 @@ namespace Blog.Core
             // 这是第二种注入跨域服务的方法，这里有歧义，部分读者可能没看懂，请看下边解释
             //services.AddCors();
             #endregion
+
+
+            services.AddAutoMapper(typeof(AllProfile));
 
         }
 
